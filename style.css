@@ -1,5 +1,3 @@
-/* GENERAL SETTINGS */
-
 :root {
     --navy: #14243A;
     --navy-light: #203752;
@@ -10,6 +8,9 @@
     --muted: #687386;
     --border: #E3E7ED;
 }
+
+
+/* GENERAL */
 
 * {
     margin: 0;
@@ -36,7 +37,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(255,255,255,0.96);
+    background: rgba(255,255,255,0.97);
     border-bottom: 1px solid var(--border);
 }
 
@@ -86,7 +87,7 @@ header {
 }
 
 
-/* HERO SECTION */
+/* HERO */
 
 .hero {
     min-height: 650px;
@@ -193,7 +194,7 @@ header {
     width: 290px;
     padding: 35px 25px;
     text-align: center;
-    background: #203752;
+    background: var(--navy-light);
     border: 1px solid #40536A;
     border-radius: 12px;
 }
@@ -233,7 +234,7 @@ header {
 }
 
 
-/* COMMON SECTION */
+/* COMMON SECTIONS */
 
 .section {
     padding: 90px 10%;
@@ -280,7 +281,7 @@ header {
 }
 
 .education-card {
-    background: var(--white);
+    background: white;
     padding: 35px;
     border-radius: 10px;
     border: 1px solid var(--border);
@@ -552,6 +553,7 @@ footer {
 
 }
 
+
 @media (max-width: 700px) {
 
     .navbar {
@@ -605,11 +607,14 @@ footer {
 
 }
 
+
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
         scroll-behavior: auto !important;
         transition-duration: 0.01ms !important;
     }
+
 }
