@@ -1,5 +1,9 @@
 const menuBtn = document.getElementById("menuBtn");
+
 const navLinks = document.getElementById("navLinks");
+
+
+// Mobile Navigation Toggle
 
 menuBtn.addEventListener("click", function () {
 
@@ -14,7 +18,7 @@ menuBtn.addEventListener("click", function () {
 });
 
 
-// Close menu after clicking a navigation link
+// Close menu after clicking navigation links
 
 document.querySelectorAll(".nav-links a").forEach(link => {
 
