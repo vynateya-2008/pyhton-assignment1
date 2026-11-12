@@ -1,150 +1,110 @@
-const menuBtn = document.getElementById("menuBtn");
+// NAVIGATION
+
+const menuToggle = document.getElementById("menuToggle");
 
 const navLinks = document.getElementById("navLinks");
 
-const scrollProgress = document.getElementById("scrollProgress");
 
-const navItems = document.querySelectorAll(".nav-link");
+if (menuToggle && navLinks) {
 
+  menuToggle.addEventListener("click", () => {
 
-// MOBILE NAVIGATION
+    const isOpen = navLinks.classList.toggle("open");
 
-menuBtn.addEventListener("click", () => {
-
-    const isOpen = navLinks.classList.toggle("active");
-
-    menuBtn.setAttribute("aria-expanded", String(isOpen));
-
-    menuBtn.setAttribute(
-        "aria-label",
-        isOpen ? "Close navigation" : "Open navigation"
+    menuToggle.setAttribute(
+      "aria-expanded",
+      String(isOpen)
     );
 
-    menuBtn.innerHTML = isOpen
-        ? '<i class="fa-solid fa-xmark"></i>'
-        : '<i class="fa-solid fa-bars"></i>';
+    menuToggle.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation" : "Open navigation"
+    );
 
-});
+    menuToggle.classList.toggle("active", isOpen);
+
+  });
 
 
-// CLOSE MENU AFTER CLICKING LINKS
-
-navItems.forEach(link => {
+  navLinks.querySelectorAll("a").forEach((link) => {
 
     link.addEventListener("click", () => {
 
-        navLinks.classList.remove("active");
+      navLinks.classList.remove("open");
 
-        menuBtn.setAttribute("aria-expanded", "false");
+      menuToggle.classList.remove("active");
 
-        menuBtn.setAttribute("aria-label", "Open navigation");
+      menuToggle.setAttribute("aria-expanded", "false");
 
-        menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      menuToggle.setAttribute(
+        "aria-label",
+        "Open navigation"
+      );
 
     });
 
-});
+  });
+
+}
+
 
 
 // SCROLL REVEAL ANIMATIONS
 
-const revealElements = document.querySelectorAll(
-    ".reveal, .skill-card"
-);
-
-const reduceMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-).matches;
+const revealItems = document.querySelectorAll(".reveal");
 
 
-if ("IntersectionObserver" in window && !reduceMotion) {
+if ("IntersectionObserver" in window) {
 
-    const revealObserver = new IntersectionObserver(
-        (entries, observer) => {
+  const observer = new IntersectionObserver(
 
-            entries.forEach(entry => {
+    (entries, currentObserver) => {
 
-                if (entry.isIntersecting) {
+      entries.forEach((entry) => {
 
-                    entry.target.classList.add("is-visible");
+        if (entry.isIntersecting) {
 
-                    observer.unobserve(entry.target);
+          entry.target.classList.add("is-visible");
 
-                }
+          currentObserver.unobserve(entry.target);
 
-            });
-
-        },
-        {
-            threshold: 0.12
         }
-    );
+
+      });
+
+    },
+
+    {
+      threshold: 0.12
+    }
+
+  );
 
 
-    revealElements.forEach(element => {
+  revealItems.forEach((item) => {
 
-        revealObserver.observe(element);
+    observer.observe(item);
 
-    });
+  });
 
 } else {
 
-    revealElements.forEach(element => {
+  revealItems.forEach((item) => {
 
-        element.classList.add("is-visible");
+    item.classList.add("is-visible");
 
-    });
-
-}
-
-
-// SCROLL PROGRESS BAR
-
-function updateScrollUI() {
-
-    const scrollable =
-        document.documentElement.scrollHeight - window.innerHeight;
-
-    const progress = scrollable > 0
-        ? (window.scrollY / scrollable) * 100
-        : 0;
-
-    scrollProgress.style.width = `${progress}%`;
-
-
-    // ACTIVE NAVIGATION SECTION
-
-    let currentSection = "home";
-
-    document.querySelectorAll("main section[id]").forEach(section => {
-
-        if (window.scrollY >= section.offsetTop - 160) {
-
-            currentSection = section.id;
-
-        }
-
-    });
-
-
-    navItems.forEach(link => {
-
-        const active =
-            link.getAttribute("href") === `#${currentSection}`;
-
-        link.classList.toggle("active", active);
-
-    });
+  });
 
 }
 
 
-// SCROLL AND RESIZE EVENTS
 
-window.addEventListener("scroll", updateScrollUI, {
-    passive: true
-});
+// AUTOMATIC FOOTER YEAR
 
-window.addEventListener("resize", updateScrollUI);
+const year = document.getElementById("year");
 
-updateScrollUI();
+if (year) {
+
+  year.textContent = new Date().getFullYear();
+
+}
