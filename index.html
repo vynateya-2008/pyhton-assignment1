@@ -1,59 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Pinumalla Vynateya - B.Tech student at Joy University, School of Computational Intelligence.">
+    <meta name="description" content="Pinumalla Vynateya - B.Tech student exploring programming, AI and emerging technologies.">
 
-    <title>Pinumalla Vynateya | Personal Portfolio</title>
+    <title>Pinumalla Vynateya | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <!-- NAVIGATION -->
-    <header>
+
+    <header class="site-header">
+
         <nav class="navbar">
 
             <a href="#home" class="logo">PV<span>.</span></a>
 
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <button class="menu-btn" id="menuBtn"
+                aria-label="Open navigation"
+                aria-expanded="false"
+                aria-controls="navLinks">
 
-            <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">
-                ☰
+                <i class="fa-solid fa-bars"></i>
+
             </button>
 
+            <ul class="nav-links" id="navLinks">
+
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+
+            </ul>
+
         </nav>
+
     </header>
 
 
     <main>
 
         <!-- HOME SECTION -->
+
         <section id="home" class="hero">
 
-            <div class="hero-content">
+            <div class="hero-grid"></div>
 
-                <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
+            <div class="hero-content reveal">
+
+                <p class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    WELCOME TO MY PORTFOLIO
+                </p>
 
                 <h1>
-                    Hello, I'm <br>
+                    Hello, I'm<br>
                     <span>Pinumalla Vynateya.</span>
                 </h1>
 
-                <h2>B.Tech Student | Computational Intelligence</h2>
+                <h2>
+                    B.Tech Student
+                    <span class="hero-divider">/</span>
+                    Computational Intelligence
+                </h2>
 
                 <p class="hero-description">
                     A technology enthusiast exploring programming,
@@ -66,22 +94,34 @@
 
                     <a href="#projects" class="btn primary-btn">
                         Explore My Work
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
 
                     <a href="#contact" class="btn outline-btn">
                         Get In Touch
+                        <i class="fa-regular fa-paper-plane"></i>
                     </a>
 
                 </div>
 
                 <div class="social-links">
 
-                    <a href="https://github.com/vynateya-2008" target="_blank" rel="noopener noreferrer">
-                        GitHub ↗
+                    <a href="https://github.com/vynateya-2008"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <i class="fa-brands fa-github"></i>
+                        GitHub <span>↗</span>
+
                     </a>
 
-                    <a href="https://www.linkedin.com/in/vynateya-pinumalla-526a60447/" target="_blank" rel="noopener noreferrer">
-                        LinkedIn ↗
+                    <a href="https://www.linkedin.com/in/vynateya-pinumalla-526a60447/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <i class="fa-brands fa-linkedin"></i>
+                        LinkedIn <span>↗</span>
+
                     </a>
 
                 </div>
@@ -89,46 +129,108 @@
             </div>
 
 
-            <div class="hero-side">
+            <!-- PROFILE CARD -->
+
+            <div class="hero-side reveal reveal-delay">
+
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
 
                 <div class="profile-card">
 
-                    <div class="profile-initials">PV</div>
+                    <div class="profile-topline">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <small>PROFILE / 001</small>
+                    </div>
+
+                    <div class="profile-initials">
+                        PV<span>.</span>
+                    </div>
+
+                    <p class="profile-kicker">
+                        STUDENT · BUILDER · LEARNER
+                    </p>
 
                     <h3>Pinumalla Vynateya</h3>
 
-                    <p>Student | Technology Enthusiast</p>
+                    <p class="profile-role">
+                        Technology Enthusiast
+                    </p>
 
                     <div class="profile-line"></div>
 
-                    <p class="university">Joy University</p>
+                    <div class="profile-detail">
 
-                    <p>School of Computational Intelligence</p>
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                        <span>
+                            <strong>Joy University</strong>
+                            <small>School of Computational Intelligence</small>
+                        </span>
+
+                    </div>
+
+                    <div class="profile-detail">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <span>
+                            <strong>Currently learning</strong>
+                            <small>Programming · AI · Web Development</small>
+                        </span>
+
+                    </div>
 
                 </div>
 
+                <span class="floating-stamp">
+                    CURIOUS<br>
+                    BY DESIGN
+                    <i class="fa-solid fa-asterisk"></i>
+                </span>
+
             </div>
+
+            <a href="#about" class="scroll-cue">
+                <span></span>
+                SCROLL TO EXPLORE
+            </a>
 
         </section>
 
 
         <!-- ABOUT SECTION -->
+
         <section id="about" class="section">
 
-            <div class="section-heading">
+            <div class="section-heading reveal">
 
-                <p class="eyebrow">GET TO KNOW ME</p>
+                <p class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    GET TO KNOW ME
+                </p>
 
-                <h2>About <span>Me</span></h2>
+                <h2>
+                    A little <span>about me.</span>
+                </h2>
+
+                <p class="section-subtitle">
+                    Curious learner. Future innovator.
+                </p>
 
             </div>
 
 
             <div class="about-content">
 
-                <div class="about-text">
+                <div class="about-text reveal">
 
-                    <h3>Curious Learner. Future Innovator.</h3>
+                    <h3>
+                        Building my foundation in technology,
+                        one project at a time.
+                    </h3>
 
                     <p>
                         I am Pinumalla Vynateya, a first-year
@@ -138,7 +240,7 @@
 
                     <p>
                         My interests lie in programming, Artificial Intelligence,
-                        Machine Learning, and Internet of Things (IoT).
+                        Machine Learning, and the Internet of Things (IoT).
                         I enjoy exploring emerging technologies and
                         understanding how they can solve real-world problems.
                     </p>
@@ -155,24 +257,60 @@
                         and technology.
                     </p>
 
+                    <div class="interest-row">
+
+                        <span>
+                            <i class="fa-solid fa-code"></i>
+                            Programming
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-brain"></i>
+                            Artificial Intelligence
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-microchip"></i>
+                            IoT
+                        </span>
+
+                    </div>
+
                 </div>
 
 
-                <div class="education-card">
+                <aside class="education-card reveal reveal-delay">
 
-                    <p class="card-label">CURRENT EDUCATION</p>
+                    <p class="card-label">
+                        01 / CURRENT EDUCATION
+                    </p>
 
-                    <h3>Bachelor of Technology</h3>
+                    <div class="education-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
 
-                    <p>First Year Student</p>
+                    <h3>
+                        Bachelor of<br>
+                        Technology
+                    </h3>
+
+                    <p class="education-year">
+                        First Year Student
+                    </p>
 
                     <div class="divider"></div>
 
                     <h4>Joy University</h4>
 
-                    <p>School of Computational Intelligence</p>
+                    <p>
+                        School of Computational Intelligence
+                    </p>
 
-                </div>
+                    <span class="education-mark">
+                        EDUCATION
+                    </span>
+
+                </aside>
 
             </div>
 
@@ -180,123 +318,290 @@
 
 
         <!-- SKILLS SECTION -->
+
         <section id="skills" class="section alternate">
 
-            <div class="section-heading">
+            <div class="section-heading reveal">
 
-                <p class="eyebrow">WHAT I KNOW</p>
+                <p class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    WHAT I'M LEARNING
+                </p>
 
-                <h2>Technical <span>Skills</span></h2>
+                <h2>
+                    My technical <span>toolkit.</span>
+                </h2>
+
+                <p class="section-subtitle">
+                    Skills grow through curiosity, practice and experimentation.
+                </p>
 
             </div>
 
 
             <div class="skills-container">
 
-                <div class="skill-card">
-                    <div class="skill-number">01</div>
+                <article class="skill-card reveal">
+
+                    <div class="skill-top">
+                        <span>01</span>
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+
                     <h3>HTML</h3>
-                    <p>Creating structured and semantic web pages.</p>
-                </div>
 
-                <div class="skill-card">
-                    <div class="skill-number">02</div>
+                    <p>
+                        Creating structured and semantic web pages.
+                    </p>
+
+                    <div class="skill-track">
+                        <span style="width:75%"></span>
+                    </div>
+
+                </article>
+
+
+                <article class="skill-card reveal">
+
+                    <div class="skill-top">
+                        <span>02</span>
+                        <i class="fa-brands fa-css3-alt"></i>
+                    </div>
+
                     <h3>CSS</h3>
-                    <p>Designing responsive and visually appealing websites.</p>
-                </div>
 
-                <div class="skill-card">
-                    <div class="skill-number">03</div>
+                    <p>
+                        Designing responsive and visually appealing websites.
+                    </p>
+
+                    <div class="skill-track">
+                        <span style="width:68%"></span>
+                    </div>
+
+                </article>
+
+
+                <article class="skill-card reveal">
+
+                    <div class="skill-top">
+                        <span>03</span>
+                        <i class="fa-brands fa-python"></i>
+                    </div>
+
                     <h3>Python</h3>
-                    <p>Learning programming fundamentals and logical problem-solving.</p>
-                </div>
 
-                <div class="skill-card">
-                    <div class="skill-number">04</div>
+                    <p>
+                        Learning programming fundamentals and logical problem-solving.
+                    </p>
+
+                    <div class="skill-track">
+                        <span style="width:52%"></span>
+                    </div>
+
+                </article>
+
+
+                <article class="skill-card reveal">
+
+                    <div class="skill-top">
+                        <span>04</span>
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+
                     <h3>Artificial Intelligence</h3>
-                    <p>Exploring basic AI workflows and applications.</p>
-                </div>
 
-                <div class="skill-card">
-                    <div class="skill-number">05</div>
+                    <p>
+                        Exploring basic AI workflows and applications.
+                    </p>
+
+                    <div class="skill-track">
+                        <span style="width:45%"></span>
+                    </div>
+
+                </article>
+
+
+                <article class="skill-card reveal">
+
+                    <div class="skill-top">
+                        <span>05</span>
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+
                     <h3>Prompting</h3>
-                    <p>Understanding effective prompting techniques.</p>
-                </div>
 
-                <div class="skill-card">
-                    <div class="skill-number">06</div>
+                    <p>
+                        Understanding effective prompting techniques.
+                    </p>
+
+                    <div class="skill-track">
+                        <span style="width:60%"></span>
+                    </div>
+
+                </article>
+
+
+                <article class="skill-card reveal">
+
+                    <div class="skill-top">
+                        <span>06</span>
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+
                     <h3>Internet of Things</h3>
-                    <p>Exploring IoT concepts through workshops.</p>
-                </div>
+
+                    <p>
+                        Exploring IoT concepts through workshops.
+                    </p>
+
+                    <div class="skill-track">
+                        <span style="width:42%"></span>
+                    </div>
+
+                </article>
 
             </div>
+
+            <p class="skill-disclaimer">
+                Progress indicators are visual summaries of my current
+                learning journey, not formal proficiency ratings.
+            </p>
 
         </section>
 
 
         <!-- PROJECTS SECTION -->
+
         <section id="projects" class="section">
 
-            <div class="section-heading">
+            <div class="section-heading reveal">
 
-                <p class="eyebrow">MY WORK</p>
+                <p class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    SELECTED WORK
+                </p>
 
-                <h2>Featured <span>Projects</span></h2>
+                <h2>
+                    Things I've <span>worked on.</span>
+                </h2>
+
+                <p class="section-subtitle">
+                    A selection of projects and experiments from my learning journey.
+                </p>
 
             </div>
 
 
             <div class="projects-container">
 
-                <div class="project-card">
+
+                <!-- PROJECT 1 -->
+
+                <article class="project-card project-featured reveal">
 
                     <div class="project-top">
 
-                        <span class="project-tag">WEB DEVELOPMENT</span>
+                        <span class="project-tag">
+                            01 / WEB DEVELOPMENT
+                        </span>
 
-                        <span class="project-icon">↗</span>
+                        <span class="project-icon">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </span>
+
+                    </div>
+
+                    <div class="project-visual portfolio-visual">
+
+                        <i class="fa-solid fa-window-maximize"></i>
+
+                        <span>
+                            PERSONAL<br>
+                            PORTFOLIO
+                        </span>
+
+                        <b>PV.</b>
 
                     </div>
 
                     <h3>Personal Portfolio Website</h3>
 
                     <p>
-                        A personal portfolio website developed using
-                        HTML and CSS to present my academic background,
-                        technical skills, and professional profile.
+                        A personal portfolio website developed using HTML
+                        and CSS to present my academic background,
+                        technical skills, projects, and professional profile.
                     </p>
 
                     <div class="tech-stack">
                         <span>HTML</span>
                         <span>CSS</span>
+                        <span>JavaScript</span>
                     </div>
 
-                </div>
+                    <span class="project-status">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Published project
+                    </span>
+
+                </article>
 
 
-                <div class="project-card">
+                <!-- PROJECT 2 -->
+
+                <article class="project-card reveal reveal-delay">
 
                     <div class="project-top">
 
-                        <span class="project-tag">PROGRAMMING</span>
+                        <span class="project-tag">
+                            02 / AI & DIGITAL SAFETY
+                        </span>
 
-                        <span class="project-icon">↗</span>
+                        <span class="project-icon">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </span>
 
                     </div>
 
-                    <h3>Python Practice Projects</h3>
+                    <div class="project-visual aegis-visual">
+
+                        <div class="aegis-symbol">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+
+                        <span>
+                            AEGIS<br>
+                            VOICE
+                        </span>
+
+                        <b>VOICE / TRUST / SAFETY</b>
+
+                    </div>
+
+                    <h3>Aegis Voice</h3>
 
                     <p>
-                        Beginner-level Python programs developed
-                        while learning programming concepts,
-                        logical thinking, and problem-solving.
+                        A privacy-focused digital safety project exploring
+                        voice-related trust and protection. Visit the live
+                        project to explore its features and interface.
                     </p>
 
                     <div class="tech-stack">
-                        <span>Python</span>
+                        <span>AI</span>
+                        <span>Web Development</span>
+                        <span>Digital Safety</span>
                     </div>
 
-                </div>
+                    <a class="project-link"
+                       href="https://aegis-voice-frontend-98w9.bolt.host/#features"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        Explore Aegis Voice
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </article>
 
             </div>
 
@@ -309,24 +614,39 @@
 
 
         <!-- ACHIEVEMENTS SECTION -->
+
         <section id="achievements" class="section alternate">
 
-            <div class="section-heading">
+            <div class="section-heading reveal">
 
-                <p class="eyebrow">MY LEARNING JOURNEY</p>
+                <p class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    MY LEARNING JOURNEY
+                </p>
 
-                <h2>Achievements & <span>Activities</span></h2>
+                <h2>
+                    Activities & <span>milestones.</span>
+                </h2>
+
+                <p class="section-subtitle">
+                    Experiences that help me learn beyond the classroom.
+                </p>
 
             </div>
 
 
             <div class="achievement-container">
 
-                <div class="achievement-card">
+
+                <article class="achievement-card reveal">
 
                     <span class="achievement-icon">01</span>
 
                     <div>
+
+                        <p class="achievement-type">
+                            WORKSHOPS / EXPLORATION
+                        </p>
 
                         <h3>IoT Workshops</h3>
 
@@ -338,14 +658,20 @@
 
                     </div>
 
-                </div>
+                    <i class="fa-solid fa-microchip achievement-mark"></i>
+
+                </article>
 
 
-                <div class="achievement-card">
+                <article class="achievement-card reveal">
 
                     <span class="achievement-icon">02</span>
 
                     <div>
+
+                        <p class="achievement-type">
+                            AI / PRACTICAL LEARNING
+                        </p>
 
                         <h3>AI Workflows & Prompting</h3>
 
@@ -357,7 +683,9 @@
 
                     </div>
 
-                </div>
+                    <i class="fa-solid fa-wand-magic-sparkles achievement-mark"></i>
+
+                </article>
 
             </div>
 
@@ -365,56 +693,76 @@
 
 
         <!-- CONTACT SECTION -->
+
         <section id="contact" class="section contact-section">
 
-            <div class="section-heading">
+            <div class="contact-inner reveal">
 
-                <p class="eyebrow">LET'S CONNECT</p>
+                <p class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    HAVE A PROJECT IN MIND?
+                </p>
 
-                <h2>Get In <span>Touch</span></h2>
+                <h2>
+                    Let's make<br>
+                    <span>something meaningful.</span>
+                </h2>
 
-            </div>
-
-
-            <p class="contact-description">
-
-                I am always interested in learning, connecting,
-                and exploring new opportunities in technology.
-
-            </p>
-
-
-            <div class="contact-container">
-
-                <a href="mailto:vynateya995@gmail.com" class="contact-card">
-
-                    <span>Email</span>
-
-                    <strong>vynateya995@gmail.com ↗</strong>
-
-                </a>
+                <p class="contact-description">
+                    I am always interested in learning, connecting,
+                    and exploring new opportunities in technology.
+                </p>
 
 
-                <a href="https://github.com/vynateya-2008"
-                   target="_blank" rel="noopener noreferrer"
-                   class="contact-card">
-
-                    <span>GitHub</span>
-
-                    <strong>View GitHub Profile ↗</strong>
-
-                </a>
+                <div class="contact-container">
 
 
-                <a href="https://www.linkedin.com/in/vynateya-pinumalla-526a60447/"
-                   target="_blank" rel="noopener noreferrer"
-                   class="contact-card">
+                    <a href="mailto:vynateya995@gmail.com"
+                       class="contact-card">
 
-                    <span>LinkedIn</span>
+                        <i class="fa-regular fa-envelope"></i>
 
-                    <strong>Connect on LinkedIn ↗</strong>
+                        <span>Email</span>
 
-                </a>
+                        <strong>vynateya995@gmail.com</strong>
+
+                        <i class="fa-solid fa-arrow-up-right-from-square card-arrow"></i>
+
+                    </a>
+
+
+                    <a href="https://github.com/vynateya-2008"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="contact-card">
+
+                        <i class="fa-brands fa-github"></i>
+
+                        <span>GitHub</span>
+
+                        <strong>View GitHub Profile</strong>
+
+                        <i class="fa-solid fa-arrow-up-right-from-square card-arrow"></i>
+
+                    </a>
+
+
+                    <a href="https://www.linkedin.com/in/vynateya-pinumalla-526a60447/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="contact-card">
+
+                        <i class="fa-brands fa-linkedin"></i>
+
+                        <span>LinkedIn</span>
+
+                        <strong>Connect on LinkedIn</strong>
+
+                        <i class="fa-solid fa-arrow-up-right-from-square card-arrow"></i>
+
+                    </a>
+
+                </div>
 
             </div>
 
@@ -424,11 +772,20 @@
 
 
     <!-- FOOTER -->
+
     <footer>
 
-        <p>© 2026 Pinumalla Vynateya. All Rights Reserved.</p>
+        <a href="#home" class="footer-logo">
+            PV<span>.</span>
+        </a>
 
-        <p>Designed and developed with HTML, CSS & JavaScript.</p>
+        <p>
+            © 2026 Pinumalla Vynateya. All rights reserved.
+        </p>
+
+        <p class="footer-note">
+            Designed with intention · Built with HTML, CSS & JavaScript
+        </p>
 
     </footer>
 
@@ -436,5 +793,4 @@
     <script src="script.js"></script>
 
 </body>
-
 </html>
